@@ -1,0 +1,208 @@
+$color-text:#9DA8CD;
+$bg-color:#46517A;
+$bg-title:#2D365D;
+$margin:20px;
+$margin-right:15px;
+@mixin title {
+    background-color: $bg-title;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 26px;
+}
+@mixin content {
+    display:block;
+    text-align:center   ;
+    text-decoration: none;
+    color: $color-text;
+    margin: 15px;
+}
+@mixin hr {
+    height: 5px;
+    color: #2B2947;
+}
+
+@mixin inform-content {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    box-shadow: 10px 10px 7px 7px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.section{
+    &-info{
+        
+        
+        margin-top: $margin;
+        &__title{
+        font-size: 35px;
+        margin-bottom: $margin;
+        }
+        &__location{
+            margin-right: $margin;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        &__age{
+            margin-left: 10px;
+        }
+        
+    }
+    &-main{
+        background-color: $bg-color;
+        
+        color: $color-text;
+        margin-bottom: $margin;
+        border-radius: 5px;
+        &__img{
+            margin:40px 30px ;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 10px 10px 7px 7px rgba(0, 0, 0, 0.4);
+        }
+        
+
+    }
+}
+
+
+.contacts{
+    color: $color-text;
+    &-title{
+        @include title;
+        }
+        &-discord, &-tel,&-email{
+            @include content;
+    
+        }
+        &-discord:hover, a:hover{
+            transition: 0.2s ease;
+            font-size: 17px;
+            color: #C5D0F0;
+            font-weight: bold;
+        }
+        &-github,&-linkedin{
+            display:block;
+            text-align:center;
+            text-decoration: none;
+            color: $color-text;
+            margin: 10px;
+        }
+        
+       
+}
+.tel-icon{
+margin-right: 5px;
+}
+.telegram-icon{
+    margin-left: 5px;
+}
+.discord{
+    margin-right: 5px;
+}
+
+.language{
+    &-title{
+        @include title;
+    }
+    &-content{
+        @include content;
+        font-size: 22px;
+    }
+
+}
+.skills{
+    &-title{
+        @include title;
+        
+    }
+    li{
+        @include content;
+        
+        display: block;
+        text-align: left;
+        font-size: 20px;
+        list-style: circle;
+    }
+    
+}
+.experience{
+    &-title{
+    span{
+            margin-right: $margin-right;
+        }
+    }
+    hr{
+        @include hr;
+    }
+    &-subtitle{
+        font-weight: bold;
+        margin-right: 30px;
+        font-size: 23px;
+        display: inline-block;
+    }
+    &-responsibilities{
+        display: block;
+        font-size: 20px;
+        margin: 10px 20px;
+
+    }
+    &-content{
+        @include inform-content;
+        margin-left: 100px;
+    }
+}
+.education{
+    &-title{
+        span{
+            margin-right:$margin-right;
+        }
+    }
+    hr{
+        @include hr;
+    }
+    &-content{
+        @include inform-content;
+    }
+}
+.courses{
+    &-title{
+        span{
+            margin-right:$margin-right;
+        }}
+    hr{
+        @include hr;
+    }
+    &-content{
+        @include inform-content;
+    }
+}
+.soft-skills{
+    &-title{
+        span{
+            margin-right:$margin-right;
+        }}
+    hr{
+        @include hr;
+    }
+    &-content{
+        @include inform-content;
+        margin-left: 100px;
+    }
+}
+.about-me{
+    &-title{
+        span{
+            margin-right:$margin-right;
+        }}
+    hr{
+        @include hr;
+    }
+    &-content{
+        @include inform-content;
+    }
+}
