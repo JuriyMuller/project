@@ -1,0 +1,106 @@
+@import "../vars";
+.ourteam{
+ text-align: center;
+ margin-bottom: 242px;
+    &-subtitle{
+        display: inline-block;
+       margin: 0 0 20px 0;
+        @include subtitle;
+
+    }
+    &-title{
+        display: inline-block;
+        margin: 0 0 20px 0;
+        @include title;
+    }
+    &-txt{
+        margin: 0;
+        display: inline-block;
+        @include text;
+        max-width: 770px;
+    }
+
+
+
+    &-wrapper{
+        margin: 83px 217px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px ;
+        grid-column-gap: 150px;
+        text-align: center;
+        position: relative;
+        &::before{
+            position:absolute;
+            content: url("../../images/left-arrow.svg");
+            top: 75px;
+            left:-60px;
+        }
+        &::after{
+            position: absolute;
+            content: url("../../images/right-arrow.svg");
+            top: 75px;
+            right:  -83px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &-user{
+        &-name{
+            margin: 0;
+            margin-bottom: 10px;
+            
+            font-family: 'Hind';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+            color: #090F3F;
+
+        }
+        &-speciality{
+            font-family: 'Hind';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+            color: #4F4F4F;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .ourteam{
+        &-wrapper{
+            display: grid;
+            grid-template-columns: 1fr;
+            &::before{
+                position:absolute;
+                content:""
+            }
+            &::after{
+                position: absolute;
+                content:""
+            }
+        }
+        &-user{
+            margin-bottom: 20px;
+        }
+    }
+   
+   }
+   @media (max-width: 576px) { 
+    .ourteam{
+        &-wrapper{
+            margin: 0;
+        }
+    }
+   }
+   @media (max-width: 1400px) { 
+    .ourteam{
+        &-wrapper{
+            grid-column-gap: 10%;
+        }
+    }
+   }

@@ -1,0 +1,67 @@
+@import "../vars";
+.benefits{
+    .inner{
+        
+    margin: 0 110px 115px 110px;
+    }
+    &-title{
+        margin-bottom: 50px;
+        @include title;
+    }
+    &-subtitle{
+        margin-bottom: 20px;
+        padding-left: 113px;
+        @include subtitle;
+        
+    }
+    &-img{
+        margin-bottom: 48px;
+    }
+    &-item{
+        background: #FFFFFF;
+         box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+        padding: 87px 30px 47px;
+        &-title{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #090F3F;
+            position: relative;
+        }
+        &-txt{
+            display: inline-block;
+            max-width: 205px;
+            @include text;
+            margin: 0;
+        }
+
+    }
+
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap: 20px;
+    text-align: center;
+    margin-bottom: 261px;
+}
+@media screen and (max-width:1200px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .benefits-item-txt{
+        max-width: 100%; 
+    }
+}
+@media screen and (max-width:769px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    .benefits-item-txt{
+        max-width: 100%; 
+    }
+}

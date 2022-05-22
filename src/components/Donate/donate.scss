@@ -1,0 +1,116 @@
+@import "../vars";
+
+.donate{
+    margin-bottom: 12px;
+    text-align: center;
+    &-subtitle{
+        @include subtitle;
+        display: inline-block;
+        margin: 0 0 20px 0;
+ 
+    }
+    &-title{
+        @include title;
+        display: inline-block;
+        max-width: 570px;
+        margin: 0 0 20px 0;
+        
+    }
+    &-txt{
+        @include text;
+        max-width: 555px;
+        display: inline-block;
+        opacity: 0.7;
+        margin-bottom: 37px;
+    }
+    &-cards{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 590px 590px;
+        grid-gap: 20px;
+        &-lymcoin-code::before{
+            position: absolute;
+            content: url("../../images/lymicoin.svg");
+            left: 25px;
+            top: 66px;
+        }
+        &-bitcoin-code::before{
+            position: absolute;
+            content: url("../../images/bitcoin.svg");
+            left: 25px;
+            top: 66px;
+        }
+        &-lymcoin,&-bitcoin{
+            background: #FFFFFF;
+            box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+            padding: 54px 170px 54px 87px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: url("../../images/qr-code.png");
+                top: 35px;
+                right: 23px;
+            }
+            &-code{
+                
+                font-family: 'Hind';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+                color: #090F3F;
+              
+                cite{
+                    
+                    font-family: 'Hind';
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 150%;
+                    letter-spacing: 0.02em;
+                    color: #4F4F4F;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) { 
+    .donate-cards{
+        grid-template-columns: 1fr;
+
+    }
+}
+@media (max-width: 576px) { 
+    .donate-cards{
+        &-lymcoin,&-bitcoin{
+            &::after{
+                position: absolute;
+                content: url("../../images/qr-code.png");
+                top: 118px;
+                right:115px;
+            }
+        }
+        &-lymcoin-code::before{
+            position: absolute;
+            content: url("../../images/lymicoin.svg");
+            left: 10px;
+            top: 66px;
+        }
+        &-bitcoin-code::before{
+            position: absolute;
+            content: url("../../images/bitcoin.svg");
+            left: 10px;
+            top: 66px;
+        }
+        &-lymcoin,&-bitcoin{
+            // &-code{
+                
+            // }
+            padding: 54px 0 125px 60px;
+        }
+    }
+    .donate-cards-lymcoin-code{
+        display: block;
+        min-width: 100px;
+    }
+   }

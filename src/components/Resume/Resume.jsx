@@ -8,7 +8,7 @@ export default function Portfolio() {
     <div className="container">
         <div className="wrapper row">
             <div className="section-main col-lg-4 ">
-                <img className='section-main__img' src="https://sun9-8.userapi.com/s/v1/ig2/6DomWV7AXy62hiLqMmTn3gn_3ycLMrL68ZUYQbXK0Bizpr2JM97J4hPPzUF45kwRZ1ozHpiBC3nidpVrXf6FrORg.jpg?size=1018x1018&quality=96&type=album" alt="" />
+                {/* <img className='section-main__img' src="../images/photo.jpg" alt="" /> */}
                 
                 
                 

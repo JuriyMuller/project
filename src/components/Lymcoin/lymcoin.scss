@@ -1,0 +1,48 @@
+@import "../vars";
+.lymcoin{
+    margin-bottom: 190px;
+    &-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 48px;
+        
+    }
+    &-title{
+        @include title;
+    }
+    &-subtitle{
+        @include subtitle;
+    }
+    
+    &-txt{
+        max-width: 556px;
+        @include text;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .lymcoin-container{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr ;
+    }
+    .lymcoin-subtitle{
+        font-size: 18px;
+    }
+    .lymcoin-img{
+        margin-bottom: 50px;
+    }
+    
+}
+@media (max-width: 576px) { 
+    .lymcoin-container{
+        display: block;
+    }
+    .lymcoin-img{
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    .lymcoin-txt{
+        margin-bottom:75px;
+    }
+   }

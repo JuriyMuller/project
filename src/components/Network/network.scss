@@ -1,0 +1,72 @@
+@import "../vars";
+
+.network{
+    background: url("../../images/network-bg.png") no-repeat;
+    background-size: cover;
+background-position: center;
+margin-bottom: 82px;
+    &-container{
+        padding-top: 200px
+    }
+    &-subtitle{
+        @include subtitle;
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        
+    }
+    &-title{
+        @include title;
+        max-width: 340px;
+        color: #FFFFFF; 
+    }
+    &-txt{
+        @include text;
+        max-width: 556px;
+        display: inline-block;
+        color: #FFFFFF;
+        margin-bottom: 49px;
+        opacity: 0.7;
+    }
+    &-items{
+        max-width: 340px;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        span{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            span{
+                color:  #CF1257;
+            }
+            cite{
+                margin-top: 20px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &-companies{
+        padding-bottom: 155px;
+        margin-left: 40px;
+        &-link+&-link{
+            margin-left: 50px;
+        }
+    }
+}
+@media (max-width: 768px) { 
+    .network-companies{
+        display: grid;
+        grid-template-columns: 1fr;
+        &-link+&-link{
+            margin-left: 0;
+        }
+    }
+   }

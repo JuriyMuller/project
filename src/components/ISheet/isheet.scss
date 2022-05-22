@@ -1,0 +1,195 @@
+@import "../vars";
+.i-sheet{
+    
+   &-container{
+      text-align: center;
+    
+   }
+    &-subtitle{
+        margin-bottom: 20px;
+        display: inline-block;
+        
+        @include subtitle;
+        
+    }
+        &-title{
+            margin: 0 0 20px 0;
+            display: inline-block;
+            @include title;
+
+        }
+        &-desc{
+            display: inline-block;
+            max-width: 770px;
+            margin: 0 0 130px;
+            @include text;
+        }
+        &-one-chart{
+            margin-left: 114px;
+            display: grid;
+            grid-template-columns: 209px 376px 1fr;
+            position: relative;
+            margin-bottom: 62px;
+            &::before{
+                position: absolute;
+                content: url("../../images/progress-chart.svg");
+                top: 105px;
+            }
+            &-item{
+                text-align: left;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+                color: #090F3F;
+                
+            }
+            
+    }
+    &-two-chart{
+        margin-left: 114px;
+        display: grid;
+        grid-template-columns: 436px 362px 1fr;
+        margin-bottom: 100px;
+            &-item{
+                text-align: left;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+                color: #090F3F;
+                
+            }
+            }
+}
+#one-item{
+    max-width: 208px;
+    padding-top: 47px;
+}
+#two-item{
+    max-width: 208px;
+    padding-left: 140px;
+}
+#three-item{
+    max-width: 208px;
+    padding-left: 145px;
+}
+#four-item{
+    max-width: 208px;
+    padding-left: 178px;
+}
+#five-item{
+    max-width: 208px;
+    padding-left: 105px;
+}
+#six-item{
+    max-width: 208px;
+    padding-left: 105px;
+}
+cite{
+    display: block;
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #4F4F4F;
+    margin-top: 20px;
+                }
+
+
+.companies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    margin-bottom: 230px;
+}
+@media screen and(max-width:1200px) {
+    .i-sheet{
+        &-one-chart{
+            padding-left: 44px;
+            padding-top: 92px;
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            margin-bottom: 0;
+            &::before{
+                position: absolute;
+                content: url("../../images/progress-chart\(1\).svg");
+                
+            }
+            &-item{
+                text-align: left;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+                color: #090F3F;
+                
+                
+            }
+        }
+        &-two-chart{
+            padding-left: 44px;
+            display: grid;
+            grid-template-columns:1fr;
+                &-item{
+                    text-align: left;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 150%;
+                    letter-spacing: 0.02em;
+                    color: #090F3F;
+                    
+                }
+                }
+    }
+    #one-item,#two-item,#three-item,#four-item,#five-item,#six-item{
+        padding: 0;
+        
+    }
+    #one-item{
+        margin-bottom: 77px;
+    }
+    #two-item{
+        margin-bottom: 62px;
+    }
+    #three-item{
+        margin-bottom: 64px;
+    }
+    #four-item{
+        margin-bottom:81px;
+    }
+    #five-item{
+        margin-bottom: 43px;
+    }
+    #six-item{
+        margin-bottom: 37px;
+    }
+    cite{
+        margin-top: 15px;
+                    }
+}
+
+@media  (max-width:1100px) {
+    .companies{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 40px;
+    }
+}
+@media (max-width:576px) {
+    .i-sheet-title{
+        max-width: 330px;
+        font-size: 30px;
+    }
+    .companies{
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        grid-row-gap: 40px;
+    }
+}
